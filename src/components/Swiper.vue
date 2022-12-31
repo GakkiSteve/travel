@@ -11,7 +11,6 @@
       </swiper-slide>
     </swiper>
   </div>
-  test1
 </template>
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue/swiper-vue.js";
@@ -31,10 +30,6 @@ export default {
   },
   data() {
     return {
-      swiperOption: {
-        pagination: ".swiper-pagination",
-        loop: true,
-      },
       swiperList: [
         {
           id: "0001",

@@ -1,6 +1,7 @@
 <template>
   <home-header></home-header>
   <home-swiper></home-swiper>
+  <home-icons></home-icons>
 </template>
 
 <script>
@@ -8,6 +9,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 import HomeHeader from "@/components/Header.vue";
 import HomeSwiper from "@/components/Swiper.vue";
+import HomeIcons from "@/components/Icons.vue";
 export default {
   name: "Home",
   //注册组件
@@ -15,6 +17,7 @@ export default {
     HelloWorld,
     HomeHeader,
     HomeSwiper,
+    HomeIcons,
   },
 };
 </script>
