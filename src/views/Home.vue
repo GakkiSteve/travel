@@ -14,7 +14,7 @@ import HomeSwiper from "@/components/Swiper.vue";
 import HomeIcons from "@/components/Icons.vue";
 import HomeRecommend from "@/components/Recommend";
 import HomeWeekend from "@/components/Weekend";
-
+import axios from "axios";
 export default {
   name: "Home",
   //注册组件
@@ -25,6 +25,17 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeWeekend,
+  },
+  methods: {
+    getHomeInfo() {
+      axios.get("/mock/index.json").then(this.getHomeInfoSucc);
+    },
+    getHomeInfoSucc(res) {
+      console.log(res);
+    },
+  },
+  mounted() {
+    this.getHomeInfo();
   },
 };
 </script>
