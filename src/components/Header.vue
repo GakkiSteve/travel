@@ -8,10 +8,13 @@
     <div class="header-input">
       <i class="iconfont icon-sousuo"></i>
     </div>
-    <div class="header-right">
-      {{ city }}
-      <i class="iconfont icon-xiajiantou"></i>
-    </div>
+
+    <router-link to="/city">
+      <div class="header-right">
+        {{ city }}
+        <i class="iconfont icon-xiajiantou"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -53,4 +56,5 @@ export default {
         width: 1.24rem
         float: right
         text-align: center
+        color:#fff
 </style>
