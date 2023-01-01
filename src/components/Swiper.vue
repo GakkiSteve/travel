@@ -1,12 +1,13 @@
 <template>
   <div class="wrapper">
-    <swiper :pagination="true" :loop="true" :modules="modules" class="mySwiper">
-      <!-- <swiper-slide>Slide 1</swiper-slide><swiper-slide>Slide 2</swiper-slide
-    ><swiper-slide>Slide 3</swiper-slide><swiper-slide>Slide 4</swiper-slide
-    ><swiper-slide>Slide 5</swiper-slide><swiper-slide>Slide 6</swiper-slide
-    ><swiper-slide>Slide 7</swiper-slide><swiper-slide>Slide 8</swiper-slide
-    ><swiper-slide>Slide 9</swiper-slide> -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper
+      :pagination="true"
+      :loop="true"
+      :modules="modules"
+      class="mySwiper"
+      v-if="list.length"
+    >
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
       </swiper-slide>
     </swiper>
@@ -19,6 +20,9 @@ import { Pagination, Navigation } from "swiper";
 
 export default {
   name: "App",
+  props: {
+    list: Array,
+  },
   components: {
     Swiper,
     SwiperSlide,
@@ -26,22 +30,6 @@ export default {
   setup() {
     return {
       modules: [Pagination, Navigation],
-    };
-  },
-  data() {
-    return {
-      swiperList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1802/e3/62ce7362ca051d02.jpg_640x200_6db551b7.jpg",
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1801/93/ce59d182aca07102.jpg_640x200_ba03d44c.jpg",
-        },
-      ],
     };
   },
 };

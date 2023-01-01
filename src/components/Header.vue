@@ -9,7 +9,7 @@
       <i class="iconfont icon-sousuo"></i>
     </div>
     <div class="header-right">
-      城市
+      {{ city }}
       <i class="iconfont icon-xiajiantou"></i>
     </div>
   </div>
@@ -18,6 +18,9 @@
 <script>
 export default {
   name: "Header",
+  props: {
+    city: String,
+  },
 };
 </script>
 
