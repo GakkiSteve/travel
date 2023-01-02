@@ -11,7 +11,7 @@
 
     <router-link to="/city">
       <div class="header-right">
-        {{ city }}
+        {{ this.$store.state.city }}
         <i class="iconfont icon-xiajiantou"></i>
       </div>
     </router-link>
